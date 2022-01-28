@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import {Home} from './pages/Home/Home'
-import { Store } from "./pages/Store/ComicStore";
+import { ComicStore } from "./pages/Store/ComicStore";
 export function RouterApp() {
     return(
         <Router>
@@ -12,7 +12,7 @@ export function RouterApp() {
                 <Route path='/' element={<Home/>}/>
             </Routes>
             <Routes>
-                <Route path='/store' element={<Store/>}/>
+                <Route path='/store' element={<ComicStore/>}/>
             </Routes>
         </Router>
     )
