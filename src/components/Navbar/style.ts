@@ -6,7 +6,7 @@ height: 14vh;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color:#bd2f0b ;
+background-color:#ed1d24 ;
 gap: 0.5rem;
 `
 

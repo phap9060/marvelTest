@@ -4,6 +4,7 @@ export function ComicStore() {
   return (
     <div>
       <Navbar />
+      <br />
       <Store />
     </div>
   );
