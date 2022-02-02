@@ -1,12 +1,14 @@
 import { RouterApp } from "./routes";
 import {GlobalStyle} from './GlobalFile'
+import { store } from './context/configureStore'
+import { Provider } from 'react-redux'
 
 function App() {
   return (
-  <div>
+  <Provider store={store}>
     <RouterApp />
     <GlobalStyle/>
-  </div>);
+  </Provider>);
 }
 
 export default App;

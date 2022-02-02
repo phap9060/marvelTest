@@ -15,18 +15,20 @@ export const card = styled.div`
   box-shadow: 5px 5px 15px 5px #000000;
   transition: 0.3s all ease-in-out;
   align-items: center;
-  cursor: pointer;
-  &:hover {
-    margin-top: -10px;
-  }
   @media (max-width: 1000px) {
     justify-content: space-around;
     width: 9.9rem;
     height: 39vh;
     padding: 0;
   }
+  @media (max-width:650px) {
+    width: 9rem;
+    height: 50vh;
+    
+  }
 `;
 export const image = styled.img`
+cursor:pointer;
 display: flex;
 justify-content: flex-start;
   width: 10rem;
@@ -52,18 +54,14 @@ font-size: 1.3rem;
 export const button = styled.button`
   width: 10rem;
   height: 2rem;
-  font-size: 1rem;
-  align-items: center;
-  background-color: #575757;
-  border-radius: 28px;
-  border: 1px solid #ffffff;
+	background-color: #027ad6;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0px 2px 5px rgba(0,0,0,.1);
   cursor: pointer;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #000000;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.6;
   }
   @media (max-width: 1000px) {
     width: 3rem;
