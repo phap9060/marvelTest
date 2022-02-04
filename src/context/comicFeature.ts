@@ -1,16 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {RootState} from './configureStore'
-
-const initialState: any = {
-    item:[]
-  };
+import {ResultData} from './Types'
+type ComicState = {
+  data:ResultData
+}
+const initialState: ComicState = {} as ComicState
 
 export const comic = createSlice({
     name: 'comic',
     initialState,
     reducers: {
-      comicPage(state, action: PayloadAction<any>) {
-        state.item = action.payload
+      comicPage(state, action: PayloadAction<ResultData>) {
+        state.data = action.payload
       }
     }
       

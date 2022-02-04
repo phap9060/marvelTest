@@ -3,20 +3,18 @@ import {useDispatch} from 'react-redux'
 import { addCart} from "../../context/cartFeature";
 import {comicPage} from '../../context/comicFeature';
 import { Link } from "react-router-dom";
+import {ResultData} from '../../context/Types'
 
 type CardProps = {
   image?: string,
   text?: string,
   price: number,
-  api:[{
-    id:number
-  }
-
-  ]
+  comic: ResultData,
+  api: ResultData
 }
 
 
-export function Card(props: any) {
+export function Card(props: CardProps) {
   const dispatch = useDispatch()
   return (
     <S.card>
@@ -28,13 +26,14 @@ export function Card(props: any) {
         View Details
         </S.details>  
       </Link>
-      {props.price>0 ?  
-        <S.button onClick={()=>{dispatch(addCart(props.api))} }  type="button" >
-        Comprar
-        </S.button>
-      : <S.disableButton>
-        Comprar
-        </S.disableButton>}
+        {props.price>0 ?  
+          <S.button onClick={()=>{dispatch(addCart(props.api))} }  type="button" >
+          Comprar
+          </S.button>
+        : <S.disableButton>
+          Comprar
+          </S.disableButton>
+        }
      
     </S.card>
   );

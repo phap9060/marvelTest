@@ -1,19 +1,21 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {RootState} from './configureStore'
+import {ResultData,APIdata} from './Types'
 
-const initialState: any = {
-  items:[]
-};
+
+const initialState: APIdata = {
+results: []
+} 
 
 export const cart = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addCart(state, action: PayloadAction<any>) {
-      state.items.push(action.payload)
+    addCart(state, action: PayloadAction<ResultData>) {
+      state.results.push(action.payload)
     },
-    removeItem(state,action:PayloadAction<any>){
-      state.items = state.items.filter(({id}:any)=> (action.payload !== id)  )
+    removeItem(state,action:PayloadAction<number>){
+      state.results = state.results.filter(({id})=> (id !== action.payload)  )
     }
 }})
 

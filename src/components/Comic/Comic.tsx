@@ -1,9 +1,10 @@
 import * as S from "./style";
 import { useSelector, useDispatch } from "react-redux";
 import { addCart } from "../../context/cartFeature";
+import { RootState } from "../../context/configureStore";
 
 export function Comic() {
-  const select = useSelector((state) => state.comic.item);
+  const select:any = useSelector<RootState>((state) => state.comic.data);
   const dispatch = useDispatch();
   return (
     <S.section>
