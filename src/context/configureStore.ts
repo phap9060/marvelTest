@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import {cart} from '../context/cartFeature'
+import {cart} from './cartFeature'
 import { comic } from './comicFeature'
 
 export const store = configureStore({
