@@ -7,6 +7,7 @@ Mini e-commerce com carrinho e página individual para cada HQ retornada pela AP
 ## Tecnologias
 
  - ReactJs + Redux ToolKit + Component Style
+ PS: Estava em estudo de TypeScript e encontrei algumas tipagens que não consegui identificar no primeiro momento, e devido a isso não consegui fazer o deploy da aplicação em um servidor estático.
 
 
 ## Redux Toolkit

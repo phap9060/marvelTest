@@ -10,7 +10,7 @@ type CardProps = {
   text?: string,
   price: number,
   comic: ResultData,
-  api: ResultData
+  cart: ResultData
 }
 
 
@@ -27,7 +27,7 @@ export function Card(props: CardProps) {
         </S.details>  
       </Link>
         {props.price>0 ?  
-          <S.button onClick={()=>{dispatch(addCart(props.api))} }  type="button" >
+          <S.button onClick={()=>{dispatch(addCart(props.cart))} }  type="button" >
           Comprar
           </S.button>
         : <S.disableButton>

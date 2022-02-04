@@ -53,7 +53,7 @@ export function Store() {
               image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
               text={comic.title}
               price={comic.prices[0].price}
-              api={comic}
+              cart={comic}
               comic={comic}
             />
           ))}

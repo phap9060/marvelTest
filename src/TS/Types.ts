@@ -7,7 +7,6 @@
     results: ResultData[]
 }
  export type ResultData = {
-    Props?:any,
     id: number,
     digitalId?: number,
     title: string,
