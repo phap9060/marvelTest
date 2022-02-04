@@ -4,23 +4,16 @@ import { useEffect, useState } from "react";
 import { baseURL } from "../../API/ComicApi";
 import { Card } from "../Card/Card";
 import load from '../../assets/images/load.jpg';
+import {ResultData} from '../../context/Types'
 
-interface Props {
-  id: number;
-  title: string;
-  description: string;
-  prices: [{ price: number }];
-  thumbnail: {
-    extension: string;
-    path: string;
-  };
-}
+
+
 const max_item = 7;
 const max_left = (max_item - 1) / 2;
 
 
 export function Store() {
-  const [comics, setComics] = useState<Props[]>([]);
+  const [comics, setComics] = useState<ResultData[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [offSet,setOffSet] = useState<number>(0)
   const limit = 12
