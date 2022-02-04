@@ -7,12 +7,3 @@ display: flex;
 align-items: center;
 justify-content: center;
 `
-export const Div = styled.div`
-width: 50%;
-@media(max-width:1000px){
-    width: 100%;
-}
-`
-export const Img = styled.img`
-width: 100%;
-`
