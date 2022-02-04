@@ -4,8 +4,7 @@ export const card = styled.div`
   border-radius: 30px;
   background: white;
   width: 18rem;
-  height: 80vh;
-  gap: 10px;
+  height: 85vh;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
@@ -13,41 +12,48 @@ export const card = styled.div`
   overflow: hidden;
   justify-content: space-around;
   box-shadow: 5px 5px 15px 5px #000000;
-  transition: 0.3s all ease-in-out;
   align-items: center;
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     justify-content: space-around;
-    width: 9.9rem;
-    height: 39vh;
+    width: 10rem;
+    height: 48vh;
     padding: 0;
   }
-  @media (max-width:650px) {
-    width: 9rem;
-    height: 50vh;
-    
-  }
+ 
 `;
 export const image = styled.img`
 cursor:pointer;
 display: flex;
-justify-content: flex-start;
+justify-content:center;
+align-items: center;
   width: 10rem;
   @media(max-width:1000px){
-    width: 5rem;
-    margin-top: 10px;
+    width: 4.5rem;
   }
 `;
 export const content = styled.p`
   font-weight: 550;
   @media (max-width: 1000px) {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 800;
   }
 `;
+export const details = styled.p`
+display: flex;
+justify-content: center;
+text-decoration: underline;
+color: blue;
+width: 100%;
+font-size: 1rem;
+align-items: center;
+cursor: pointer;
+font-weight: 600;
+`
 export const Price = styled.p`
 font-weight: 600;
 font-size: 1.3rem;
 @media (max-width: 1000px) {
-    font-size: 15px;
+    font-size: 12px;
   }
 
 `
@@ -66,6 +72,7 @@ export const button = styled.button`
   @media (max-width: 1000px) {
     width: 3rem;
     font-size: 0.5rem;
+
   }
 `;
 export const disableButton = styled.button`

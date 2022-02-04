@@ -1,32 +1,25 @@
 import * as S from "./style";
-import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useSelector,useDispatch} from "react-redux";
+import { removeItem } from "../../context/cartFeature";
+import exclude from '../../assets/images/exclude.png'
+
 export function Cart() {
-  const [count, setCount] = useState<number>(1);
   const select = useSelector((state) => state.cart.items);
-  console.log(select);
-  function plus(props:number) {
-    return props + 1
-  }
-  function minus() {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  }
+  const dispatch = useDispatch()
+
+
+ 
+  
   return (
     <S.Span>
       <S.div>
-        {select.map((comic) => (
-          <S.Section>
+        { select.map((comic:any,key:number) => (
+          <S.Section key={comic.id}>
             <S.Img
               src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
             />
-            <S.Qt>
-              <S.button onClick={() => plus(comic.digitalId)}>+</S.button>
-              {quantidade}
-              <S.button onClick={() => minus()}>-</S.button>
-            </S.Qt>
-            <S.Price>R$ {Math.ceil(count * comic.prices[0].price)}</S.Price>
+            <S.Price>R$ {Math.ceil(comic.prices[0].price)}</S.Price>
+            <S.imgX onClick={()=>dispatch(removeItem(comic.title))} src={exclude} />
           </S.Section>
         ))}
       </S.div>

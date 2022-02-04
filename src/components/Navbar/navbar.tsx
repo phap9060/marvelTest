@@ -8,7 +8,7 @@ export function Navbar() {
       <S.Img onClick={()=>{navigate('/')}}  src={logo} />
       <S.H1 onClick={()=>{navigate('/')}}>Home |</S.H1>
       <S.H1 onClick={()=>{navigate('/store')}}>Comic Store |</S.H1>
-      <S.H1 onClick={()=>{navigate('/Cart')}}>Cart</S.H1>
+      <S.H1 onClick={()=>{navigate('/cart')}}>Cart</S.H1>
     </S.Nav>
   );
 }

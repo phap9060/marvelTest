@@ -1,9 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import {cart} from '../context/cartFeature'
+import { comic } from './comicFeature'
 
 export const store = configureStore({
   reducer: {
-    cart:cart.reducer
+    cart:cart.reducer,
+    comic : comic.reducer
+
   },
 })
 

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { baseURL } from "../../API/ComicApi";
 import { Card } from "../Card/Card";
 import load from '../../assets/images/load.jpg';
-import {useDispatch} from 'react-redux'
 
 interface Props {
   id: number;
@@ -25,8 +24,6 @@ export function Store() {
   const [loading, setLoading] = useState<boolean>(false);
   const [offSet,setOffSet] = useState<number>(0)
   const limit = 12
-
-  const dispatch = useDispatch()
 
 
 
@@ -64,6 +61,7 @@ export function Store() {
               text={comic.title}
               price={comic.prices[0].price}
               api={comic}
+              comic={comic}
             />
           ))}
       </S.Section>
