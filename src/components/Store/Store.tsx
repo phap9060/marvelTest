@@ -42,7 +42,7 @@ export function Store() {
     <S.Container>
     <S.ul>
       {loading && Array.from({length:max_item}).map((value,index) => index + first)
-      .map((page) =>(
+      .map((page,index) =>(
             <S.li> 
               <S.button onClick={ () => setOffSet((page - 1) * limit)} key={page}>
               {page}

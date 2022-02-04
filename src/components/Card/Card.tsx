@@ -18,11 +18,6 @@ type CardProps = {
 
 export function Card(props: any) {
   const dispatch = useDispatch()
-
-
-
-
-  
   return (
     <S.card>
       <S.image src={props.image} />
