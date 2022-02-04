@@ -3,7 +3,7 @@ import {useDispatch} from 'react-redux'
 import { addCart} from "../../context/cartFeature";
 import {comicPage} from '../../context/comicFeature';
 import { Link } from "react-router-dom";
-import {ResultData} from '../../context/Types'
+import {ResultData} from '../../TS/Types'
 
 type CardProps = {
   image?: string,

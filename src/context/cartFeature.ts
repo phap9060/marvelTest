@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {RootState} from './configureStore'
-import {ResultData,APIdata} from './Types'
+import {ResultData,APIdata} from '../TS/Types'
 
 
 const initialState: APIdata = {

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import {RootState} from './configureStore'
-import {ResultData} from './Types'
+import {ResultData} from '../TS/Types'
 type ComicState = {
   data:ResultData
 }

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { baseURL } from "../../API/ComicApi";
 import { Card } from "../Card/Card";
 import load from '../../assets/images/load.jpg';
-import {ResultData} from '../../context/Types'
+import {ResultData} from '../../TS/Types'
 
 
 

@@ -3,7 +3,7 @@ import { useSelector,useDispatch} from "react-redux";
 import { removeItem } from "../../context/cartFeature";
 import exclude from '../../assets/images/exclude.png'
 import { RootState } from "../../context/configureStore";
-import { ResultData } from "../../context/Types";
+import { ResultData } from "../../TS/Types";
 
 export function Cart() {
   const select:any = useSelector<RootState>((state) => state.cart.results);
